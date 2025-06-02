@@ -1,0 +1,515 @@
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "inter", sans-serif;
+}
+
+[data-theme="light"] {
+  --primary: #f4f3ee;
+  --secondary: #171717;
+  --accent-lines: #fb5607;
+  --accent: #ffbe0b;
+}
+
+[data-theme="dark"] {
+  --primary: #171717;
+  --secondary: #f4f3ee;
+  --accent-lines: #fff;
+  --accent: #ffbe0b;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+.resume {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: var(--secondary);
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+}
+
+.resume a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.cursor-follower {
+  width: 50px;
+  height: 50px;
+  background-color: var(--accent);
+  position: absolute;
+  border-radius: 50%;
+  z-index: 111111;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out;
+}
+
+.hero-section,
+nav {
+  padding: 3.5rem;
+}
+
+.hero-section {
+  height: 90vh;
+}
+
+.hero-theme-toggle {
+  float: right;
+  cursor: pointer;
+}
+
+.hero-theme-toggle img {
+  width: 30px;
+}
+
+svg path {
+  stroke: var(--accent-lines);
+}
+
+.hero-content-wrapper {
+  padding: 7rem;
+  padding-left: 9rem;
+  padding-top: 10rem;
+}
+
+.hero-content-wrapper span {
+  font-size: 18px;
+}
+
+.hero-content-wrapper h1 {
+  font-size: 128px;
+  font-weight: 800;
+  letter-spacing: 0.2rem;
+  position: relative;
+  right: 0.2rem;
+  margin-top: 1rem;
+}
+
+.hero-content-wrapper p {
+  font-size: 21px;
+  line-height: 2rem;
+  letter-spacing: 0.7px;
+  margin-top: 1.8rem;
+}
+
+/* Project Section start */
+
+.projects-section {
+  margin-bottom: 8rem;
+  margin-left: 13rem;
+  margin-right: 13rem;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 8rem;
+}
+
+.projects-container h2 {
+  font-family: Inter;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 2rem;
+}
+
+.project-category-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.project-category {
+  min-width: fit-content;
+  font-family: "Inter";
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: normal;
+  opacity: 0.8;
+}
+
+.projects-container h3 {
+  font-family: "Inria Sans";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.projects-container p {
+  max-width: 815px;
+  text-align: justify;
+}
+
+.project-category-line {
+  width: 100%;
+  height: 1px;
+  background-color: var(--secondary);
+}
+
+.project-tags-group {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.project-tag {
+  background-color: var(--accent);
+  padding: 5px 1rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #171717;
+}
+
+.projects-container img {
+  max-width: 1205px;
+  max-height: 490px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+/* Project Section end */
+
+/* Contact form start */
+
+.contact-form-container {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  border: 2px solid var(--secondary);
+  padding: 3rem;
+  border-radius: 10px;
+}
+
+.contact-form-container h3 {
+  font-size: 42px;
+}
+
+.contact-form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form-container form input,
+textarea {
+  padding: 0.5rem 1rem;
+  background-color: var(--primary);
+  border: 1px solid var(--secondary);
+  border-radius: 0.4rem;
+}
+
+.contact-form-container button {
+  background-color: var(--accent);
+  border: none;
+  padding: 0.5rem 0;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+/* Contact form end */
+/* Breakpoints */
+
+/* New Breakpoint: 1400px (Large laptops / small desktop) */
+@media screen and (max-width: 1400px) {
+  .hero-section,
+  nav {
+    padding: 2.8rem 1rem 0 0;
+  }
+
+  .hero-content-wrapper {
+    padding: 6rem;
+    padding-left: 8rem;
+    padding-top: 8rem;
+  }
+
+  .hero-content-wrapper h1 {
+    font-size: 110px;
+  }
+
+  .hero-content-wrapper p {
+    font-size: 19px;
+    line-height: 1.9rem;
+  }
+
+  .projects-section {
+    margin-left: 8rem;
+    margin-bottom: 7rem;
+    margin-right: 7rem;
+  }
+
+  .projects-container h2 {
+    font-size: 58px;
+  }
+
+  .projects-container h3 {
+    font-size: 58px;
+  }
+
+  .projects-container p {
+    max-width: 750px;
+  }
+
+  .project-tag {
+    font-size: 0.85rem;
+    padding: 4px 1rem;
+  }
+
+  .projects-container img {
+    max-width: 1100px;
+    max-height: 460px;
+  }
+}
+
+/* Laptop (1024px) */
+@media screen and (max-width: 1024px) {
+  .hero-section,
+  nav {
+    padding: 2rem;
+  }
+
+  .hero-content-wrapper {
+    padding: 5rem;
+    padding-left: 6rem;
+    padding-top: 6rem;
+  }
+
+  .hero-content-wrapper h1 {
+    font-size: 90px;
+  }
+
+  .hero-content-wrapper p {
+    font-size: 18px;
+    line-height: 1.8rem;
+  }
+
+  .projects-section {
+    margin-left: 6rem;
+    margin-bottom: 6rem;
+    margin-right: 6rem;
+  }
+
+  .projects-container h2 {
+    font-size: 48px;
+  }
+
+  .projects-container h3 {
+    font-size: 48px;
+  }
+
+  .projects-container p {
+    max-width: 700px;
+  }
+
+  .project-tag {
+    font-size: 0.9rem;
+    padding: 4px 1rem;
+  }
+
+  .projects-container img {
+    max-width: 1000px;
+    max-height: 420px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .hero-section {
+    height: 130vh;
+  }
+}
+
+/* Tablet (768px) */
+@media screen and (max-width: 768px) {
+  .hero-section,
+  nav {
+    padding: 1.5rem;
+  }
+
+  .hero-content-wrapper {
+    padding: 4rem;
+    padding-left: 4rem;
+    padding-top: 4rem;
+  }
+
+  .hero-content-wrapper h1 {
+    font-size: 70px;
+  }
+
+  .hero-content-wrapper p {
+    font-size: 16px;
+    line-height: 1.6rem;
+  }
+
+  .projects-section {
+    margin-left: 4rem;
+    margin-bottom: 5rem;
+    margin-right: 4rem;
+  }
+
+  .projects-container h2 {
+    font-size: 40px;
+  }
+
+  .projects-container h3 {
+    font-size: 40px;
+  }
+
+  .projects-container p {
+    max-width: 600px;
+  }
+
+  .project-tag {
+    font-size: 0.8rem;
+    padding: 4px 1rem;
+  }
+
+  .projects-container img {
+    max-width: 800px;
+    max-height: 350px;
+  }
+}
+
+/* Phone (480px) */
+@media screen and (max-width: 480px) {
+  .hero-section {
+    margin-top: 8rem;
+    padding: 0.1rem;
+    height: 72vh;
+  }
+  .hero-section,
+  nav {
+    padding: 1rem;
+  }
+
+  .hero-content-wrapper {
+    padding: 0.3rem;
+    padding-left: 0.3rem;
+    padding-top: 3rem;
+  }
+
+  .hero-content-wrapper h1 {
+    font-size: 50px;
+  }
+
+  .hero-content-wrapper p {
+    font-size: 14px;
+    line-height: 1.5rem;
+    text-align: justify;
+  }
+
+  .projects-section {
+    margin-left: 2rem;
+    margin-bottom: 4rem;
+    margin-right: 2rem;
+  }
+
+  .projects-container h2 {
+    font-size: 32px;
+  }
+
+  .projects-container h3 {
+    font-size: 32px;
+  }
+
+  .projects-container p {
+    max-width: 500px;
+  }
+
+  .project-tag {
+    font-size: 0.75rem;
+    padding: 3px 0.8rem;
+  }
+
+  .projects-container img {
+    max-width: 100%;
+    max-height: 300px;
+  }
+
+  .contact-form-container {
+    margin: 1rem;
+  }
+
+  .contact-form-container h3 {
+    font-size: 32px;
+  }
+
+  svg path {
+    stroke: var(--accent-lines);
+    stroke-width: 0.25mm;
+  }
+}
