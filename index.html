@@ -8,9 +8,13 @@
   </head>
   <body class="body">
     <div class="body-container">
-       <div class="resume">
-          <a href="https://drive.google.com/file/d/1-PmRgWWYjaQ8R2iM5zhKAPJiX_guvmLo/view?usp=drive_link" target="_blank">See my Resume!</a>
-       </div>
+      <div class="resume">
+        <a
+          href="https://drive.google.com/file/d/1-PmRgWWYjaQ8R2iM5zhKAPJiX_guvmLo/view?usp=drive_link"
+          target="_blank"
+          >See my Resume!</a
+        >
+      </div>
       <nav>
         <div class="hero-theme-toggle">
           <img src="/public/svg/dark_mode.svg" alt="dark mode toggle" />
@@ -114,9 +118,23 @@
               I write code, optimize systems, and build for scale.<br />Currently
               a Graduate TA at Northeastern, mentoring in databases and SQL.
               <br />
-              Looking for a Fall 2025 co-op to create fast, reliable software that
-              makes an impact.
+              Looking for a Fall 2025 co-op to create fast, reliable software
+              that makes an impact.
             </p>
+            <br />
+            <div
+              style="
+                display: flex;
+                flex-direction: row;
+                gap: 1rem;
+                margin-left: -0.3rem;
+                margin-top: 1rem;
+              "
+              
+            >
+              <img class="location_svg" src="/public/svg/location_dark.svg"/>
+              <span id="location"> Boston, MA, USA</span>
+            </div>
           </div>
         </div>
       </section>
@@ -130,15 +148,14 @@
             </div>
             <h3>Kambaz Learning Management System</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut
-              perspiciatis unde omnis iste natus error sit voluptatem accusantium
-              doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-              inventore veritatis et quasi architecto beatae vitae dicta sunt
-              explicabo. <br /><br />sed quia consequuntur magni dolores eos qui
-              ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
-              dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed
-              quia non numquam eius modi tempora incidunt ut labore et dolore
-              magnam aliquam quaerat voluptatem.
+              Developed a role-based learning platform enabling secure access
+              for students and professors using JWT and bcrypt authentication.
+              Built optimized RESTful APIs and a dynamic quiz module with
+              MongoDB-backed data storage for courses and assessments. <br />
+              <br />
+              Implemented comprehensive testing with Jest and Cypress,
+              significantly improving reliability and reducing production
+              issues.
             </p>
             <div class="project-tags-group">
               <div class="project-tag">MERN Stack</div>
@@ -147,59 +164,161 @@
               <div class="project-tag">Netlify</div>
               <div class="project-tag">Render</div>
             </div>
-            <img src="public/images/kambaz.png" alt="" />
+            <div class="zoom-wrapper">
+  <img src="public/images/kambaz.png" alt="Kambaz LMS" class="zoomable-image" />
+</div>
           </div>
+
+          <!-- <div class='tableauPlaceholder' id='viz1749580632539' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ai&#47;AirbnbTableauProject_17495804610640&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='views&#47;AirbnbTableauProject_17495804610640&#47;Dashboard1?:language=en-US&amp;:embed=true&amp;publish=yes&amp;:sid=&amp;:redirect=auth' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ai&#47;AirbnbTableauProject_17495804610640&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1749580632539');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='1577px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script> -->
           <div class="project project2">
             <div class="project-category-group">
-              <span class="project-category">Full Stack Development</span>
+              <span class="project-category">Automation / DevOps</span>
               <div class="project-category-line"></div>
             </div>
-            <h3>Kambaz Learning Management System</h3>
+            <h3>LeetCode Submission Auto-Archiver</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut
-              perspiciatis unde omnis iste natus error sit voluptatem accusantium
-              doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-              inventore veritatis et quasi architecto beatae vitae dicta sunt
-              explicabo. <br /><br />sed quia consequuntur magni dolores eos qui
-              ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
-              dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed
-              quia non numquam eius modi tempora incidunt ut labore et dolore
-              magnam aliquam quaerat voluptatem.
+              <!-- Built a Python automation tool that retrieves new LeetCode submissions daily, generates structured code files, and pushes them to GitHub starting from the last synced commit.
+                        Scheduled with Windows Task Scheduler for hands-free updates, ensuring a continuous record of coding progress and version history. -->
+
+              I got tired of manually saving my LeetCode solutions every day, so
+              I built a Python automation tool to do it for me. It fetches my
+              latest submissions, organizes them into clean code files, and
+              pushes them to GitHub starting from the last synced commit.
+              <br /><br />I scheduled it with Windows Task Scheduler, and now it
+              updates hands-free—cutting down my manual effort by 98% and
+              keeping a consistent version history of my coding practice.
             </p>
             <div class="project-tags-group">
-              <div class="project-tag">MERN Stack</div>
-              <div class="project-tag">REST API</div>
-              <div class="project-tag">Cypress</div>
-              <div class="project-tag">Netlify</div>
-              <div class="project-tag">Render</div>
+              <div class="project-tag">Python</div>
+              <div class="project-tag">GraphQL</div>
+              <div class="project-tag">Automation Scripting</div>
+              <div class="project-tag">File I/O & OS Operations</div>
+              <div class="project-tag">Git & GitHub</div>
             </div>
-            <img src="public/images/project_image.png" alt="" />
+            <img src="public/images/gitpush2.png" alt="" class="zoomable-image" />
           </div>
           <div class="project project3">
             <div class="project-category-group">
-              <span class="project-category">Full Stack Development</span>
+              <span class="project-category"
+                >Data Analysis & Visualization</span
+              >
               <div class="project-category-line"></div>
             </div>
-            <h3>Kambaz Learning Management System</h3>
+            <h3>Data Professionals Insights Dashboard</h3>
+            <!-- <p>
+              Built an end-to-end analytics dashboard using the Kaggle Data Professionals Survey to surface key workforce insights. Cleaned the raw CSV in Power Query (type fixes, null handling, column splits), then modeled the data in Power BI with DAX measures for:
+              <br><br>
+              Average salary by job title & experience band<br>
+
+              Participant count by country (geo-map)<br>
+
+              Work-life-balance satisfaction heat-map across roles<br><br>
+
+              Interactive slicers let stakeholders drill into any segment and export charts for reporting. The result is a single view that helps recruiters and managers benchmark compensation, talent distribution, and employee well-being.
+            </p> -->
+
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut
-              perspiciatis unde omnis iste natus error sit voluptatem accusantium
-              doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-              inventore veritatis et quasi architecto beatae vitae dicta sunt
-              explicabo. <br /><br />sed quia consequuntur magni dolores eos qui
-              ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
-              dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed
-              quia non numquam eius modi tempora incidunt ut labore et dolore
-              magnam aliquam quaerat voluptatem.
+              I was curious about global trends in data professionals
+              careers—things like pay, satisfaction, and where talent is
+              concentrated—so I decided to build an interactive dashboard using
+              the Kaggle Data Professionals Survey. <br /><br />
+              I cleaned and shaped the raw data in Power Query, then modeled it
+              in Power BI to surface insights like average salary by role,
+              country-wise participant distribution, and work-life balance
+              across jobs. Through slicers and visuals, the dashboard helped me
+              (and potential stakeholders) explore workforce patterns and
+              benchmark compensation and well-being in the data industry.
             </p>
             <div class="project-tags-group">
-              <div class="project-tag">MERN Stack</div>
-              <div class="project-tag">REST API</div>
-              <div class="project-tag">Cypress</div>
-              <div class="project-tag">Netlify</div>
-              <div class="project-tag">Render</div>
+              <div class="project-tag">Power BI</div>
+              <div class="project-tag">Data Cleaning & Transformation</div>
+              <div class="project-tag">Exploratory Data Analysis</div>
+              <div class="project-tag">Data Visualization</div>
             </div>
-            <img src="public/images/project_image.png" alt="" />
+            <img src="public/images/power-bi-project.png" alt="" class="zoomable-image" />
+          </div>
+          <div class="project project4">
+            <div class="project-category-group">
+              <span class="project-category"
+                >Data Analysis & Visualization</span
+              >
+              <div class="project-category-line"></div>
+            </div>
+            <h3>Seattle Rental Trends Explorer</h3>
+            <p>
+              My friend in Seattle wanted help pricing her apartment listing, so
+              I built a Tableau dashboard to analyze local rental trends.
+              <br /><br />Using data on Airbnb listings, I visualized average
+              prices by ZIP code, number of listings by bedroom count, seasonal
+              revenue patterns, and the highest and lowest rates charged across
+              the city. The dashboard gave her a clear view of when to list and
+              how to position her apartment for maximum income.
+            </p>
+            <div class="project-tags-group">
+              <div class="project-tag">Tableau</div>
+              <div class="project-tag">Data Cleaning & Transformation</div>
+              <div class="project-tag">Exploratory Data Analysis</div>
+              <div class="project-tag">Data Visualization</div>
+            </div>
+            <img src="public/images/tableau.png" alt="" class="zoomable-image" />
+          </div>
+          <div class="project project5">
+            <div class="project-category-group">
+              <span class="project-category"
+                >Data Analysis & Visualization</span
+              >
+              <div class="project-category-line"></div>
+            </div>
+            <h3>Bike Sales Demographics Analyzer</h3>
+            <p>
+              I stumbled across a rich bike-sales dataset and convinced myself
+              to peek beneath the surface numbers. So I loaded it into Excel,
+              cleaned it with Power Query, and spun up pivot-table dashboards
+              that let me slice sales by age bracket, commute distance, income
+              tier, and region. As the charts took shape, clear patterns
+              emerged. <br /><br />
+              Short-distance commuters and middle-aged folk drove the most
+              purchases—turning a casual data dive into an insightful look at
+              what really moves bikes off the showroom floor.
+            </p>
+            <div class="project-tags-group">
+              <div class="project-tag">Excel</div>
+              <div class="project-tag">Pivot Tables</div>
+              <div class="project-tag">Trend Analysis</div>
+              <div class="project-tag">Exploratory Data Analysis</div>
+            </div>
+            <img src="public/images/excel-project.png" alt="" class="zoomable-image" />
+          </div>
+
+          <div class="project project6">
+            <div class="project-category-group">
+              <span class="project-category">UI / UX Design</span>
+              <div class="project-category-line"></div>
+            </div>
+            <h3>Equilibrium Mind</h3>
+            <p>
+              <!-- Designed key features for Equilibrium Mind, a student-focused mental wellness app, to provide personalized care pathways. Developed modules for self-help content delivery, therapist matching through onboarding surveys, and mood-based progress tracking. 
+              These features collectively support a holistic approach to mental health management through engaging resources, intelligent recommendations, and actionable insights. -->
+
+              I collaborated with two of my friends where we focused on creating
+              a student-friendly mental wellness app rooted in real user needs.
+              We began with competitor analysis and user interviews to identify
+              pain points in existing solutions, then moved through paper
+              prototyping and low-fidelity wireframes. <br /><br />Usability
+              testing early on helped shape intuitive user flows, while a
+              heuristic evaluation after the first high-fidelity prototype
+              iteration led to critical refinements. The result was a polished,
+              empathetic interface that delivers personalized care through
+              seamless navigation, engaging content, and smart recommendations.
+            </p>
+            <div class="project-tags-group">
+              <div class="project-tag">UI/UX</div>
+              <div class="project-tag">Figma</div>
+              <div class="project-tag">Wireframing & Paper Prototyping</div>
+              <div class="project-tag">Usability Testing</div>
+              <div class="project-tag">Heuristic Evaluation</div>
+            </div>
+            <img src="public/images/ui-ux2.png" alt="" class="zoomable-image" />
           </div>
         </div>
       </section>
@@ -247,7 +366,8 @@
       svg,
       stagger,
       utils,
-      onScroll,createAnimatable
+      onScroll,
+      createAnimatable,
     } from "https://cdn.jsdelivr.net/npm/animejs/+esm";
 
     animate(svg.createDrawable(".line"), {
@@ -278,7 +398,6 @@
         );
       });
     });
-
   </script>
 
   <script src="script.js"></script>

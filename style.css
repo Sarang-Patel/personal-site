@@ -151,11 +151,16 @@ svg path {
   margin-top: 1rem;
 }
 
-.hero-content-wrapper p {
+.hero-content-wrapper p{
   font-size: 21px;
   line-height: 2rem;
   letter-spacing: 0.7px;
   margin-top: 1.8rem;
+}
+
+#location {
+  font-size: 16px;
+  letter-spacing: 0.7px;
 }
 
 /* Project Section start */
@@ -232,12 +237,29 @@ svg path {
   color: #171717;
 }
 
-.projects-container img {
-  max-width: 1205px;
-  max-height: 490px;
+.projects-container img  {
   flex-shrink: 0;
   object-fit: cover;
 }
+
+.zoomable-image {
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+
+.zoomable-image.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  cursor: zoom-out;
+}
+
+
 
 /* Project Section end */
 
@@ -307,6 +329,12 @@ textarea {
     line-height: 1.9rem;
   }
 
+  
+  #location {
+    font-size: 19px;
+  }
+
+
   .projects-section {
     margin-left: 8rem;
     margin-bottom: 7rem;
@@ -331,8 +359,8 @@ textarea {
   }
 
   .projects-container img {
-    max-width: 1100px;
-    max-height: 460px;
+    /* max-width: 1100px; */
+    /* max-height: 460px; */
   }
 }
 
@@ -356,6 +384,10 @@ textarea {
   .hero-content-wrapper p {
     font-size: 18px;
     line-height: 1.8rem;
+  }
+
+   #location {
+    font-size: 18px;
   }
 
   .projects-section {
@@ -391,6 +423,18 @@ textarea {
   .hero-section {
     height: 130vh;
   }
+
+  .zoomable-image.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  cursor: zoom-out;
+}
 }
 
 /* Tablet (768px) */
@@ -413,6 +457,10 @@ textarea {
   .hero-content-wrapper p {
     font-size: 16px;
     line-height: 1.6rem;
+  }
+
+   #location {
+    font-size: 16px;
   }
 
   .projects-section {
@@ -442,6 +490,7 @@ textarea {
     max-width: 800px;
     max-height: 350px;
   }
+  
 }
 
 /* Phone (480px) */
@@ -470,6 +519,10 @@ textarea {
     font-size: 14px;
     line-height: 1.5rem;
     text-align: justify;
+  }
+
+   #location {
+    font-size: 14px;
   }
 
   .projects-section {
@@ -512,4 +565,17 @@ textarea {
     stroke: var(--accent-lines);
     stroke-width: 0.25mm;
   }
+
+  .zoomable-image.fullscreen {
+  position: fixed;
+  top: 0%;
+  left: 0;
+  width: 100vw;
+  min-height: 90vh;
+  object-fit: contain;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  cursor: zoom-out;
+}
+  
 }
