@@ -1,6 +1,7 @@
 const toggle_btn = document.querySelector(".hero-theme-toggle");
 const htmlElement = document.documentElement;
-const imgElement = toggle_btn.querySelector("img");
+const imgElement = toggle_btn.querySelector(".theme-btn");
+const gitbtn = toggle_btn.querySelector(".github-btn");
 const locationElement = document.querySelector(".location_svg");
 const dropdownArrow = document.querySelector(".dropdown-label img");
 
@@ -8,6 +9,7 @@ var currentTheme = htmlElement.getAttribute("data-theme");
 
 if (currentTheme === "light") {
   imgElement.src = "/public/svg/dark_mode.svg";
+  gitbtn.src = "/public/svg/github.svg";
   locationElement.src = "/public/svg/location_dark.svg";
   dropdownArrow.src = "/public/svg/arrow-black.svg";
 }
@@ -19,10 +21,13 @@ toggle_btn.addEventListener("click", () => {
 
   if (currentTheme === "dark") {
     imgElement.src = "/public/svg/light_mode.svg";
+    gitbtn.src = "/public/svg/github-white.svg";
     locationElement.src = "/public/svg/location.svg";
     dropdownArrow.src = "/public/svg/arrow-white.svg";
   } else {
     imgElement.src = "/public/svg/dark_mode.svg";
+    gitbtn.src = "/public/svg/github.svg";
+
     locationElement.src = "/public/svg/location_dark.svg";
     dropdownArrow.src = "/public/svg/arrow-black.svg";
   }
@@ -112,15 +117,13 @@ dropdownItems.forEach((item) => {
     dropdown.classList.remove("is-active");
 
     allProjects.forEach((project) => {
-      if(selectedText === "Software Developer") {
+      if (selectedText === "Software Developer") {
         project.style.display = project.classList.contains("SD") ? "" : "none";
-      }else if (selectedText === "Data Analyst"){
+      } else if (selectedText === "Data Analyst") {
         project.style.display = project.classList.contains("DS") ? "" : "none";
-      }else{
-        project.style.display = ""
+      } else {
+        project.style.display = "";
       }
-    })
+    });
   });
 });
-
-

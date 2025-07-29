@@ -21,6 +21,18 @@
   --accent: #ffbe0b;
 }
 
+::selection {
+  background: var(--secondary);
+  color: var(--primary);
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: var(--secondary);
+  color: var(--primary);
+  text-shadow: none;
+}
+
 /* 2. Remove default margin */
 * {
   margin: 0;
@@ -122,10 +134,18 @@ nav {
 .hero-theme-toggle {
   float: right;
   cursor: pointer;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 
 .hero-theme-toggle img {
-  width: 30px;
+  width: 33px;
+}
+
+.hero-theme-toggle .github-btn {
+  width: 28px;
+  height: 28px;
 }
 
 svg path {
