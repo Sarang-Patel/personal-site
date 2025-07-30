@@ -8,17 +8,24 @@
   </head>
   <body class="body">
     <div class="body-container">
-      <div class="resume">
-        <a
-          href="https://drive.google.com/file/d/1-PmRgWWYjaQ8R2iM5zhKAPJiX_guvmLo/view?usp=drive_link"
-          target="_blank"
-          >See my Resume!</a
-        >
+      <div class="resume-group">
+        <div class="resume-modal">
+          <div><a href="">SDE Resume</a></div>
+          <span class="line"></span>
+          <div><a href="">Data Analyst Resume</a></div>
+        </div>
+        <div class="resume">See my Resume!</div>
       </div>
       <nav>
         <div class="hero-theme-toggle">
-          <a href="https://github.com/Sarang-Patel"><img src="public/svg/github.svg" alt="github" class="github-btn"></a>
-          <img src="/public/svg/dark_mode.svg" class="theme-btn" alt="dark mode toggle" />
+          <a href="https://github.com/Sarang-Patel" target="_blank"
+            ><img src="public/svg/github.svg" alt="github" class="github-btn"
+          /></a>
+          <img
+            src="/public/svg/dark_mode.svg"
+            class="theme-btn"
+            alt="dark mode toggle"
+          />
         </div>
       </nav>
       <section class="hero-section">
@@ -158,13 +165,128 @@
               </ul>
             </button>
           </div>
+          <div class="project project7 SD">
+            <div class="project-category-group">
+              <span class="project-category">Full Stack Development</span>
+              <div class="project-category-line"></div>
+            </div>
+            <h3 title="Live Demo">
+              <a
+                href="https://store-it-cloud-storage.netlify.app/"
+                target="_blank"
+                >Store It Cloud Storage App
+                <img
+                  src="public/svg/sidearrowblack.svg"
+                  class="arrowSide"
+                  alt="live demo"
+              /></a>
+            </h3>
+            <p>
+              Built a full-stack cloud storage manager with secure file upload,
+              preview, and categorized dashboards using Next.js, React, and
+              Tailwind CSS. Integrated Appwrite for authentication and file
+              storage, using signed URLs for secure downloads. Structured a
+              type-safe codebase with TypeScript and deployed via Netlify with
+              environment-based configs.
+            </p>
+            <div class="project-tags-group">
+              <div class="project-tag">MERN</div>
+              <div class="project-tag">AppWrite</div>
+              <div class="project-tag">Authentication & Authorization</div>
+              <div class="project-tag">Cloud Storage</div>
+              <div class="project-tag">File Management</div>
+            </div>
+            <img
+              src="public/images/storeit.png"
+              alt=""
+              class="zoomable-image"
+            />
+          </div>
+
+          <div class="project project9 DS">
+            <div class="project-category-group">
+              <span class="project-category">Data Analytics</span>
+              <div class="project-category-line"></div>
+            </div>
+            <h3 title="Read case study">
+              <a
+                href="https://sarang-patel.github.io/data-analytics-case-study/Final-Case-Study.html"
+                target="_blank"
+                >Cyclistic Bike-Share Case Study
+                <img
+                  src="public/svg/sidearrowblack.svg"
+                  class="arrowSide"
+                  alt="live demo"
+              /></a>
+            </h3>
+
+            <p>
+              Completed a comprehensive end-to-end case study as part of the
+              Google Data Analytics Certificate. Analyzed over 5 million rows of
+              bike-share data using R to uncover user behavior trends between
+              casual and annual riders. Created actionable recommendations
+              backed by data visualizations and shared insights to support a
+              marketing strategy.
+            </p>
+            <div class="project-tags-group">
+              <div class="project-tag">Google Data Analytics</div>
+              <div class="project-tag">R</div>
+              <div class="project-tag">Data Cleaning</div>
+              <div class="project-tag">Exploratory Data Analysis</div>
+              <div class="project-tag">Data Visualization</div>
+              <div class="project-tag">Case Study</div>
+            </div>
+            <img
+              src="public/images/case-study.png"
+              alt="Cyclistic Case Study"
+              class="zoomable-image"
+            />
+          </div>
+          <div class="project project8 SD">
+            <div class="project-category-group">
+              <span class="project-category">Systems Programming</span>
+              <div class="project-category-line"></div>
+            </div>
+            <h3>MiniGit - Lightweight Version Control System</h3>
+            <p>
+              Developed a lightweight, Git-like version control system from
+              scratch in Python. Supports core Git features such as repository
+              initialization, staging, committing, commit logs, checkout, and
+              working directory status tracking. Designed an object-based
+              architecture using content-addressable storage and structured
+              commits with JSON. Includes a custom ignore system via
+              <code>.minigitignore</code> and robust CLI built with Python's
+              standard library.
+            </p>
+            <div class="project-tags-group">
+              <div class="project-tag">Python</div>
+              <div class="project-tag">CLI Tool</div>
+              <div class="project-tag">Version Control</div>
+              <div class="project-tag">File System</div>
+              <div class="project-tag">Content Addressing</div>
+              <div class="project-tag">SHA-1 Hashing</div>
+            </div>
+            <img
+              src="public/images/minigit.png"
+              alt="MiniGit Demo Screenshot"
+              class="zoomable-image"
+            />
+          </div>
           <div class="project project1 SD">
             <div class="project-category-group">
               <span class="project-category">Full Stack Development</span>
               <div class="project-category-line"></div>
             </div>
 
-            <h3>Kambaz Learning Management System</h3>
+            <h3 title="Live Demo">
+              <a href="https://finalproject-kambaz.netlify.app/" target="_blank"
+                >Kambaz Learning Management System
+                <img
+                  src="public/svg/sidearrowblack.svg"
+                  class="arrowSide"
+                  alt="live demo"
+              /></a>
+            </h3>
 
             <p>
               Developed a role-based learning platform enabling secure access
@@ -358,94 +480,6 @@
               <div class="project-tag">Heuristic Evaluation</div>
             </div>
             <img src="public/images/ui-ux2.png" alt="" class="zoomable-image" />
-          </div>
-
-          <div class="project project7 SD">
-            <div class="project-category-group">
-              <span class="project-category">Full Stack Development</span>
-              <div class="project-category-line"></div>
-            </div>
-            <h3>Store It Cloud Storage App</h3>
-            <p>
-              Built a full-stack cloud storage manager with secure file upload,
-              preview, and categorized dashboards using Next.js, React, and
-              Tailwind CSS. Integrated Appwrite for authentication and file
-              storage, using signed URLs for secure downloads. Structured a
-              type-safe codebase with TypeScript and deployed via Netlify with
-              environment-based configs.
-            </p>
-            <div class="project-tags-group">
-              <div class="project-tag">MERN</div>
-              <div class="project-tag">AppWrite</div>
-              <div class="project-tag">Authentication & Authorization</div>
-              <div class="project-tag">Cloud Storage</div>
-              <div class="project-tag">File Management</div>
-            </div>
-            <img
-              src="public/images/storeit.png"
-              alt=""
-              class="zoomable-image"
-            />
-          </div>
-
-          <div class="project project8 SD">
-            <div class="project-category-group">
-              <span class="project-category">Systems Programming</span>
-              <div class="project-category-line"></div>
-            </div>
-            <h3>MiniGit - Lightweight Version Control System</h3>
-            <p>
-              Developed a lightweight, Git-like version control system from
-              scratch in Python. Supports core Git features such as repository
-              initialization, staging, committing, commit logs, checkout, and
-              working directory status tracking. Designed an object-based
-              architecture using content-addressable storage and structured
-              commits with JSON. Includes a custom ignore system via
-              <code>.minigitignore</code> and robust CLI built with Python's
-              standard library.
-            </p>
-            <div class="project-tags-group">
-              <div class="project-tag">Python</div>
-              <div class="project-tag">CLI Tool</div>
-              <div class="project-tag">Version Control</div>
-              <div class="project-tag">File System</div>
-              <div class="project-tag">Content Addressing</div>
-              <div class="project-tag">SHA-1 Hashing</div>
-            </div>
-            <img
-              src="public/images/minigit.png"
-              alt="MiniGit Demo Screenshot"
-              class="zoomable-image"
-            />
-          </div>
-
-          <div class="project project9 DS">
-            <div class="project-category-group">
-              <span class="project-category">Data Analytics</span>
-              <div class="project-category-line"></div>
-            </div>
-            <h3>Cyclistic Bike-Share Case Study</h3>
-            <p>
-              Completed a comprehensive end-to-end case study as part of the
-              Google Data Analytics Certificate. Analyzed over 5 million rows of
-              bike-share data using R to uncover user behavior trends between
-              casual and annual riders. Created actionable recommendations
-              backed by data visualizations and shared insights to support a
-              marketing strategy.
-            </p>
-            <div class="project-tags-group">
-              <div class="project-tag">Google Data Analytics</div>
-              <div class="project-tag">R</div>
-              <div class="project-tag">Data Cleaning</div>
-              <div class="project-tag">Exploratory Data Analysis</div>
-              <div class="project-tag">Data Visualization</div>
-              <div class="project-tag">Case Study</div>
-            </div>
-            <img
-              src="public/images/case-study.png"
-              alt="Cyclistic Case Study"
-              class="zoomable-image"
-            />
           </div>
         </div>
       </section>

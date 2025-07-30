@@ -1,9 +1,10 @@
-const toggle_btn = document.querySelector(".hero-theme-toggle");
+const toggle_btn = document.querySelector(".theme-btn");
 const htmlElement = document.documentElement;
-const imgElement = toggle_btn.querySelector(".theme-btn");
-const gitbtn = toggle_btn.querySelector(".github-btn");
+const imgElement = document.querySelector(".theme-btn");
+const gitbtn = document.querySelector(".github-btn");
 const locationElement = document.querySelector(".location_svg");
 const dropdownArrow = document.querySelector(".dropdown-label img");
+const arrowSide = document.querySelectorAll(".arrowSide");
 
 var currentTheme = htmlElement.getAttribute("data-theme");
 
@@ -20,16 +21,23 @@ toggle_btn.addEventListener("click", () => {
   htmlElement.setAttribute("data-theme", currentTheme);
 
   if (currentTheme === "dark") {
-    imgElement.src = "/public/svg/light_mode.svg";
+    toggle_btn.src = "/public/svg/light_mode.svg";
     gitbtn.src = "/public/svg/github-white.svg";
     locationElement.src = "/public/svg/location.svg";
     dropdownArrow.src = "/public/svg/arrow-white.svg";
+
+    arrowSide.forEach((arrow) => {
+      arrow.src = "/public/svg/sidearrowwhite.svg";
+    });
   } else {
     imgElement.src = "/public/svg/dark_mode.svg";
     gitbtn.src = "/public/svg/github.svg";
 
     locationElement.src = "/public/svg/location_dark.svg";
     dropdownArrow.src = "/public/svg/arrow-black.svg";
+    arrowSide.forEach((arrow) => {
+      arrow.src = "/public/svg/sidearrowblack.svg";
+    });
   }
 });
 
@@ -126,4 +134,18 @@ dropdownItems.forEach((item) => {
       }
     });
   });
+});
+
+document.querySelector(".resume").addEventListener("click", () => {
+  document.querySelector(".resume-modal").classList.toggle("show");
+});
+
+// Close the modal when clicking outside of it
+document.addEventListener("click", (e) => {
+  if (
+    !document.querySelector(".resume-modal").contains(e.target) &&
+    !document.querySelector(".resume").contains(e.target)
+  ) {
+    document.querySelector(".resume-modal").classList.remove("show");
+  }
 });

@@ -103,9 +103,53 @@ h6 {
   background-color: var(--secondary);
   padding: 0.5rem 1rem;
   border-radius: 0.4rem;
+  cursor: pointer;
 }
 
-.resume a {
+.resume-modal {
+  position: fixed;
+  bottom: 5rem;
+  right: 1rem;
+  background-color: var(--secondary);
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.4rem;
+  display: none;
+}
+
+.show {
+  display: flex;
+}
+
+.resume-modal div {
+  padding: 0.5rem 1rem;
+  min-width: 175px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.line {
+  width: 100%;
+  background-color: var(--primary);
+  height: 1px;
+}
+
+.resume-modal a {
+  text-decoration: none;
+  color: var(--primary);
+}
+.resume-modal div:hover {
+  background-color: var(--primary);
+  color: var(--secondary);
+  border: 1px solid var(--secondary);
+  border-radius: 0.4rem;
+}
+
+.resume-modal div:hover a {
+  color: var(--secondary);
+}
+
+.resume {
   color: var(--primary);
   text-decoration: none;
 }
@@ -301,12 +345,21 @@ ul {
   opacity: 0.8;
 }
 
-.projects-container h3 {
+.projects-container h3,
+h3 a {
   font-family: "Inria Sans";
   font-size: 64px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  text-decoration: none;
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+
+h3 a img {
+  display: inline-block;
+  width: 35px;
 }
 
 .projects-container p {
@@ -413,7 +466,7 @@ textarea {
   .hero-content-wrapper {
     padding: 6rem;
     padding-left: 8rem;
-    padding-top: 8rem;
+    padding-top: 4rem;
   }
 
   .hero-content-wrapper h1 {
@@ -439,8 +492,13 @@ textarea {
     font-size: 58px;
   }
 
-  .projects-container h3 {
+  .projects-container h3,
+  h3 a {
     font-size: 58px;
+  }
+
+  h3 a img {
+    width: 32px;
   }
 
   .projects-container p {
@@ -468,7 +526,7 @@ textarea {
   .hero-content-wrapper {
     padding: 5rem;
     padding-left: 6rem;
-    padding-top: 6rem;
+    padding-top: 5rem;
   }
 
   .hero-content-wrapper h1 {
@@ -494,8 +552,13 @@ textarea {
     font-size: 48px;
   }
 
-  .projects-container h3 {
+  .projects-container h3,
+  h3 a {
     font-size: 48px;
+  }
+
+  h3 a img {
+    width: 28px;
   }
 
   .projects-container p {
@@ -577,8 +640,13 @@ textarea {
     font-size: 40px;
   }
 
-  .projects-container h3 {
+  .projects-container h3,
+  h3 a {
     font-size: 40px;
+  }
+
+  h3 a img {
+    width: 26px;
   }
 
   .projects-container p {
@@ -647,8 +715,13 @@ textarea {
     font-size: 32px;
   }
 
-  .projects-container h3 {
+  .projects-container h3,
+  h3 a {
     font-size: 32px;
+  }
+
+  h3 a img {
+    width: 23px;
   }
 
   .projects-container p {
