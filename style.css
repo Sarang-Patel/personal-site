@@ -398,6 +398,10 @@ h3 a img {
   transition: transform 0.3s ease;
 }
 
+.project10 .zoomable-image, .project11 .zoomable-image {
+  width: 25vw;
+}
+
 .zoomable-image.fullscreen {
   position: fixed;
   top: 0;
@@ -409,6 +413,8 @@ h3 a img {
   z-index: 1000;
   cursor: zoom-out;
 }
+
+
 
 /* Project Section end */
 
@@ -509,6 +515,15 @@ textarea {
     font-size: 0.85rem;
     padding: 4px 1rem;
   }
+
+
+  .project10 .zoomable-image, .project11 .zoomable-image {
+  width: 35vw;
+}
+
+.project10 .zoomable-image.fullscreen, .project11 .zoomable-image.fullscreen {
+  width: 100vw;
+}
 }
 
 /* Laptop (1024px) */
@@ -569,6 +584,9 @@ textarea {
     max-width: 1000px;
     max-height: 420px;
   }
+  .project10 .zoomable-image, .project11 .zoomable-image {
+  width: 50vw;
+}
 }
 
 @media screen and (max-width: 900px) {
@@ -597,6 +615,10 @@ textarea {
     z-index: 1000;
     cursor: zoom-out;
   }
+
+  .project10 .zoomable-image, .project11 .zoomable-image {
+  width: 75vw;
+}
 }
 
 /* Tablet (768px) */
@@ -657,6 +679,10 @@ textarea {
     max-width: 800px;
     max-height: 350px;
   }
+
+  .project10 .zoomable-image, .project11 .zoomable-image {
+  width: 80vw;
+}
 }
 
 @media screen and (max-width: 768px) {
@@ -757,4 +783,8 @@ textarea {
     z-index: 1000;
     cursor: zoom-out;
   }
+
+  .project10 .zoomable-image, .project11 .zoomable-image {
+  width: 100vw;
+}
 }

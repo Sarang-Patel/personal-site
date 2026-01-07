@@ -14,7 +14,9 @@
           <span class="line"></span>
           <div><a href="https://drive.google.com/file/d/16hAEhElh2M3Jfnlh0BYAHtkjiC7zyRvc/view?usp=drive_link" target="_blank">Data Analyst Resume</a></div>
         </div>
-        <div class="resume">See my Resume!</div>
+        <a href="https://drive.google.com/file/d/1CVbtEQ08Bl39qGyoAjmJVefeurw_5BXu/view?usp=drive_link" target="_blank">
+          <div class="resume">See my Resume!</div>
+        </a>
       </div>
       <nav>
         <div class="hero-theme-toggle">
@@ -123,11 +125,9 @@
               </svg>
             </h1>
             <p>
-              I write code, optimize systems, and build for scale.<br />Currently
-              a Graduate TA at Northeastern, mentoring in databases and SQL.
+              Software engineer focused on backend systems, performance optimization, and scalable architecture.
               <br />
-              Looking for a Fall 2025 co-op to create fast, reliable software
-              that makes an impact.
+              Applying for full-time SWE roles to build fast, reliable software at scale.
             </p>
             <br />
             <div
@@ -151,7 +151,7 @@
             <h2>Projects</h2>
             <button role="button" class="dropdown">
               <span class="dropdown-label">
-                <span class="label-text">All Projects</span>
+                <span class="label-text">Software Developer</span>
 
                 <img
                   src="public/svg/arrow-black.svg"
@@ -164,6 +164,56 @@
                 <li class="dropdown-item">Data Analyst</li>
               </ul>
             </button>
+          </div>
+          <div class="project project10 SD">
+            <div class="project-category-group">
+              <span class="project-category">Systems Programming</span>
+              <div class="project-category-line"></div>
+            </div>
+            <h3 title="Live Demo">
+              Unix-like Shell in Rust
+            </h3>
+            <p>
+              Built a minimal, Unix-like interactive shell in Rust focused on correctness, clarity, and idiomatic design. The shell supports built-in commands, external command execution, pipelines, I/O redirection, tab completion, and persistent command history, with behavior closely mirroring Bash. Internally, it cleanly separates parsing, execution, and stream wiring while leveraging Rust's safety guarantees to avoid common concurrency and resource-management bugs.
+            </p>
+            <div class="project-tags-group">
+              <div class="project-tag">Rust</div>
+              <div class="project-tag">Process Management</div>
+              <div class="project-tag">Shells</div>
+              <div class="project-tag">Pipelines</div>
+              <div class="project-tag">I/O Redirection</div>
+            </div>
+            <img
+              src="public/images/shell.png"
+              alt=""
+              class="zoomable-image"
+            />
+          </div>
+          <div class="project project11 SD">
+            <div class="project-category-group">
+              <span class="project-category">Distributed Systems</span>
+              <div class="project-category-line"></div>
+            </div>
+            <h3 title="Live Demo">
+              Fault-Tolerant Distributed Key-Value Store
+            </h3>
+            <p>
+              Designed and implemented a distributed key-value store in Java using the Paxos consensus protocol to ensure consistency across replicas in the presence of failures. The system models proposer, acceptor, and learner roles, simulates random component crashes and timeouts, and coordinates client requests across multiple server instances. Emphasis was placed on correctness under failure, thread-safe state management, and clear separation between networking, consensus logic, and storage.
+            </p>
+            <div class="project-tags-group">
+              <div class="project-tag">Java</div>
+              <div class="project-tag">Paxos</div>
+              <div class="project-tag">Concurrency</div>
+              <div class="project-tag">Fault Tolerance</div>
+              <div class="project-tag">Consensus Algorithms</div>
+              <div class="project-tag">RMI / Networking</div>
+              
+            </div>
+            <img
+              src="public/images/paxos.png"
+              alt=""
+              class="zoomable-image"
+            />
           </div>
           <div class="project project7 SD">
             <div class="project-category-group">

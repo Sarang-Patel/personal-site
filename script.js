@@ -64,37 +64,6 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-const images = document.querySelectorAll(".zoomable-image");
-
-images.forEach((img) => {
-  const wrapper = img.parentElement;
-
-  img.addEventListener("click", () => {
-    const isFullscreen = wrapper.classList.contains("fullscreen");
-
-    document
-      .querySelectorAll(".zoom-wrapper.fullscreen")
-      .forEach((w) => w.classList.remove("fullscreen"));
-
-    if (!isFullscreen) {
-      wrapper.classList.add("fullscreen");
-      document.body.style.overflow = "hidden";
-    } else {
-      wrapper.classList.remove("fullscreen");
-      document.body.style.overflow = "";
-    }
-  });
-});
-
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    document
-      .querySelectorAll(".zoom-wrapper.fullscreen")
-      .forEach((w) => w.classList.remove("fullscreen"));
-    document.body.style.overflow = "";
-  }
-});
-
 const dropdown = document.querySelector(".dropdown");
 
 const dropdownMenu = () => {
@@ -117,35 +86,43 @@ const dropdownLabelText = dropdown.querySelector(".label-text");
 const dropdownItems = dropdown.querySelectorAll(".dropdown-item");
 const allProjects = document.querySelectorAll(".project");
 
+function filterProjects(selectedText) {
+  allProjects.forEach((project) => {
+    if (selectedText === "Software Developer") {
+      project.style.display = project.classList.contains("SD") ? "" : "none";
+    } else if (selectedText === "Data Analyst") {
+      project.style.display = project.classList.contains("DS") ? "" : "none";
+    } else {
+      project.style.display = "";
+    }
+  });
+}
+
+filterProjects(dropdownLabelText.textContent);
+
 dropdownItems.forEach((item) => {
   item.addEventListener("click", (e) => {
     e.stopPropagation();
+
     const selectedText = e.target.textContent;
     dropdownLabelText.textContent = selectedText;
     dropdown.classList.remove("is-active");
 
-    allProjects.forEach((project) => {
-      if (selectedText === "Software Developer") {
-        project.style.display = project.classList.contains("SD") ? "" : "none";
-      } else if (selectedText === "Data Analyst") {
-        project.style.display = project.classList.contains("DS") ? "" : "none";
-      } else {
-        project.style.display = "";
-      }
-    });
+    filterProjects(selectedText);
   });
 });
 
-document.querySelector(".resume").addEventListener("click", () => {
-  document.querySelector(".resume-modal").classList.toggle("show");
-});
 
-// Close the modal when clicking outside of it
-document.addEventListener("click", (e) => {
-  if (
-    !document.querySelector(".resume-modal").contains(e.target) &&
-    !document.querySelector(".resume").contains(e.target)
-  ) {
-    document.querySelector(".resume-modal").classList.remove("show");
-  }
-});
+// document.querySelector(".resume").addEventListener("click", () => {
+//   document.querySelector(".resume-modal").classList.toggle("show");
+// });
+
+// // Close the modal when clicking outside of it
+// document.addEventListener("click", (e) => {
+//   if (
+//     !document.querySelector(".resume-modal").contains(e.target) &&
+//     !document.querySelector(".resume").contains(e.target)
+//   ) {
+//     document.querySelector(".resume-modal").classList.remove("show");
+//   }
+// });
