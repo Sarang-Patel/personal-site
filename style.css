@@ -460,6 +460,42 @@ textarea {
 }
 
 /* Contact form end */
+
+/* footer begins */
+
+.site-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 4rem;
+  font-size: 0.85rem;
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.footer-links a {
+  color: var(--secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+
+/* footer ends*/
+
 /* Breakpoints */
 
 /* New Breakpoint: 1400px (Large laptops / small desktop) */
